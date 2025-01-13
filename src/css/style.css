@@ -1,6 +1,10 @@
 /* style.css */
 
 .headerContainer {
+    /*Destacando Header para separa-los das outras seções*/
+    /*Só apagar este background color para ver o header normal*/
+    background-color: red;
+
     display: flex;
     justify-content: space-between;
     align-items: center;

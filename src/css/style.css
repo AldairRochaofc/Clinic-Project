@@ -1,0 +1,86 @@
+/* style.css */
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 30px;
+}
+
+.headerLeft img {
+    height: 32px;
+}
+
+.headerRight ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.headerRight li {
+    margin: 0 15px;
+}
+
+.headerRight a,
+.hamburgerMenuLinks a {
+    font-family: "Inter", serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-decoration: none;
+    color: #111827;
+}
+
+.headerRight a:hover {
+    color: #007BFF;
+}
+
+/* Ícone de menu hambúrguer */
+.hamburgerMenu {
+    display: none; /* Oculta o ícone em telas maiores */
+    cursor: pointer;
+}
+
+.hamburgerMenu img {
+    height: 32px;
+}
+
+/* Menu hambúrguer escondido por padrão */
+.hamburgerMenuLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Menu hambúrguer ativo */
+.hamburgerMenuLinks.active {
+    display: flex;
+}
+
+/* Itens no menu hambúrguer */
+.hamburgerMenuLinks li {
+    margin: 10px 0;
+}
+
+/* Menu principal padrão para telas maiores */
+.headerRight ul {
+    display: flex;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Oculta o menu principal */
+    .headerRight ul {
+        display: none;
+    }
+
+    /* Mostra o ícone de hambúrguer */
+    .hamburgerMenu {
+        display: block;
+    }
+}

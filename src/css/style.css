@@ -6,10 +6,6 @@
 }
 /* style.css Katsu Mouley*/
 
-* {
-  margin: 0px;
-}
-
 .headerContainer {
   display: flex;
   justify-content: space-between;
@@ -120,10 +116,7 @@
 
 /* Posicionamento das imagens de background */
 body {
-  background-color: #f2f7ffb2;
-  background-image: url("../assets/Main/icone-github.png");
-  background-repeat: no-repeat;
-  background-position: right center;
+  background: #f2f7ffb2 url("../assets/Main/icone-github.png") no-repeat right center;
   background-size: 50px;
 }
 
@@ -138,64 +131,62 @@ body {
 
 div > img.left-band-1 {
   position: absolute;
-
   left: 10%;
   top: 90%;
-
   transform: translate(-50%, -45%);
+  opacity: 80%;
 }
 
 div > img.left-band-2 {
   position: absolute;
-
   left: 10%;
   top: 100%;
-
   transform: translate(-80%, -46%);
+  opacity: 80%;
 }
 
 div > img.right-band-1 {
   position: absolute;
-
-  right: 0%;
-  top: 60%;
-
+  right: 2%;
+  top: 50%;
   transform: translate(0%, -5%);
+  opacity: 50%;
 }
 
 div > img.right-band-2 {
   position: absolute;
-
   right: 0%;
   top: 70%;
-
   transform: translate(-0%, -25%);
+  opacity: 80%;
 }
 
 /* Configuracão do layout main container */
 
 .main-container {
+  font-family: "Inter";
   /* Posicionamento dos itens */
-  background: none;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 8%;
   z-index: 1;
   position: absolute;
-  gap: 50px;
+  gap: 20px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .left-side-main {
-  flex: 1 300px;
+  flex: 1 400px;
+  display: flex;
+  flex-direction: column;
   max-width: 648px;
   font-size: 18px;
-  padding: 20px;
 }
 
 .left-side-main > h1 {
   font-size: 60px;
-  line-height: 72px;
 }
 
 .left-side-main > button {
@@ -205,13 +196,50 @@ div > img.right-band-2 {
   color: white;
   border-radius: 8px;
   border: none;
+  transition: .5s;
+}
+
+.left-side-main > button:hover {
+  cursor: pointer;
+  background-color: #0cb2ff;
+  transition: .5s;
 }
 
 .right-side-main > img {
   display: block;
-  height: 426px;
+  width: 400px;
 }
 
 /* Responsividade */
 
-/* Por fazer... */
+@media (max-width: 1000px) {
+  /* Oculta o menu principal */
+  .right-side-main {
+    margin: 5% auto;
+  }
+
+  .left-side-main{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .left-side-main > button{
+    margin: 0 auto;
+  }
+  div > img.left-band-1 {
+    opacity: 40%;
+  }
+
+  div > img.left-band-2 {
+    opacity: 40%;
+  }
+
+  div > img.right-band-1 {
+    opacity: 40%;
+  }
+
+  div > img.right-band-2 {
+    opacity: 40%;
+  }
+
+}

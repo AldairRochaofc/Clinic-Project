@@ -1,9 +1,13 @@
 /* style.css */
 
+* {
+   margin: 0px;
+}
+
 .headerContainer {
     /*Destacando Header para separa-los das outras seções*/
     /*Só apagar este background color para ver o header normal*/
-    background-color: red;
+
 
     display: flex;
     justify-content: space-between;
@@ -88,3 +92,104 @@
         display: block;
     }
 }
+
+/* M. Riyaz */
+
+/* Posicionamento das imagens de background */
+body {
+    background-color: #F2F7FFB2;
+    background-image: url('../assets/Main/icone-github.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 50px;
+}
+
+.main {
+    position: relative;
+    background:  url('../assets/Main/BG.svg') no-repeat center bottom;
+    background-size: cover;
+    backdrop-filter: blur(6px);
+    max-width: 100%;
+    height: 90vh;
+}
+
+div > img.left-band-1{
+    position: absolute;
+
+    left: 10%;
+    top: 90%;
+
+    transform: translate(-50%, -45%);
+}
+
+div > img.left-band-2 {
+    position: absolute;
+
+    left: 10%;
+    top: 100%;
+
+    transform: translate(-80%, -46%);
+}
+
+div > img.right-band-1{
+    position: absolute;
+
+    right: 0%;
+    top: 60%;
+
+    transform: translate(0%, -5%);
+}
+
+div > img.right-band-2 {
+    position: absolute;
+
+    right: 0%;
+    top: 70%;
+
+    transform: translate(-0%, -25%);
+}
+
+/* Configuracão do layout main container */
+
+.main-container {
+    /* Posicionamento dos itens */
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 8%;
+    z-index: 1;
+    position: absolute;
+    gap: 50px;
+}
+
+.left-side-main {
+    flex: 1 300px;
+    max-width: 648px;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.left-side-main > h1 {
+    font-size: 60px;
+    line-height: 72px;
+
+}
+
+.left-side-main > button {
+    background-color: #4194D1;
+    width: 217px;
+    height: 56px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+.right-side-main > img{
+    display: block;
+    height: 426px;
+}
+
+/* Responsividade */
+
+/* Por fazer... */

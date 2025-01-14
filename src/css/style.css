@@ -1,10 +1,11 @@
 /* style.css */
-
-.headerContainer {
+.HeaderSection{
     /*Destacando Header para separa-los das outras seções*/
     /*Só apagar este background color para ver o header normal*/
     background-color: red;
+}
 
+.headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,10 +38,13 @@
     text-decoration-skip-ink: none;
     text-decoration: none;
     color: #111827;
+    transition: 0.3s all;
 }
 
-.headerRight a:hover {
-    color: #007BFF;
+.headerRight a:hover,
+.hamburgerMenuLinks a:hover {
+    color: #0091ff;
+    text-decoration: underline;
 }
 
 /* Ícone de menu hambúrguer */
@@ -51,7 +55,9 @@
 
 .hamburgerMenu img {
     height: 32px;
+    transition: transform 0.3s ease;
 }
+
 
 /* Menu hambúrguer escondido por padrão */
 .hamburgerMenuLinks {
@@ -59,6 +65,7 @@
     flex-direction: column;
     width: 100%;
     padding: 10px;
+    max-width: fit-content;
 }
 
 /* Menu hambúrguer ativo */
